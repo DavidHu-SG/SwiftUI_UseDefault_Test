@@ -15,7 +15,7 @@ struct ContentView: View {
             
             Button(action: {
                 // Will cause Compiling failed: type of expression is ambiguous without more context
-                // Comment this than Canvas will work
+                // Comment this then Canvas will work
                 UserDefaults.standard.setValue(true, forKey: "UseDefault_Test")
             }) {
                 HStack {

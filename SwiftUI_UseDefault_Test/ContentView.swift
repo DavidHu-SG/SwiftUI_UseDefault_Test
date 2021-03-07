@@ -9,8 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Hello, world!")
+                .padding()
+            
+            Button(action: {
+                // Will cause Compiling failed: type of expression is ambiguous without more context
+                // Comment this than Canvas will work
+                UserDefaults.standard.setValue(true, forKey: "UseDefault_Test")
+            }) {
+                HStack {
+                    Image(systemName: "alarm")
+                    Text("Test Button")
+                }
+            }.padding()
+        }
     }
 }
 
